@@ -2,9 +2,10 @@ import { createBrowserRouter, redirect } from "react-router-dom";
 import Login from "../pages/Login";
 import Users from "../pages/Users";
 import ErrorPage from "../pages/ErrorPage";
+import { useTokenStore } from "../store/store";
 
 const isLogged = async () => {
-    const token = sessionStorage.getItem('token');
+    const token = useTokenStore.getState().token;
     if (!token) {
         return redirect("/");
     }
