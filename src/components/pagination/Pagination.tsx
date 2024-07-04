@@ -14,13 +14,13 @@ const Pagination = (props: PaginationProps) => {
     const { currentPage, itemsPerPage, setCurrentPage, setItemsPerPage, totalPages } = props;
 
     return (
-        <div className="flex justify-end gap-2 mb-10">
+        <div className="flex justify-end gap-2 mb-10 mt-2">
             <SelectItemsPerPage
                 itemsPerPage={itemsPerPage}
                 setItemsPerPage={setItemsPerPage}
             />
             <Button
-                className={`${currentPage === 1 ? 'bg-slate-300' : 'bg-slate-400'}`}
+                className={`${currentPage === 1 ? 'bg-slate-300' : 'bg-slate-400'} `}
                 disabled={currentPage === 1}
                 onClick={() => setCurrentPage(currentPage - 1)}
             >
@@ -30,7 +30,7 @@ const Pagination = (props: PaginationProps) => {
                 </div>
             </Button>
             <Button
-                className={`${currentPage === totalPages ? 'bg-slate-300' : 'bg-slate-400'}`}
+                className={`${currentPage === totalPages ? 'bg-slate-300' : 'bg-slate-400'} `}
                 disabled={currentPage === totalPages}
                 onClick={() => setCurrentPage(currentPage + 1)}
             >

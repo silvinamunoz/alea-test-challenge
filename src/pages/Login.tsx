@@ -1,6 +1,6 @@
-import { Label, TextInput, Button } from "flowbite-react";
+import { Label, TextInput, Button, Card } from "flowbite-react";
 import useLogin from "../hooks/useLogin";
-
+import aleaLogo from '../assets/img/alea_logo.jpeg';
 
 const Login = () => {
 
@@ -16,27 +16,30 @@ const Login = () => {
         mutate({ email, password });
     }
     return (
-        <div className="flex justify-center">
-            <form onSubmit={handleSubmit} className="flex max-w-md flex-col gap-4 p-10 ">
-                <h1>Prueba tecnica Alea - React</h1>
-                <div>
-                    <div className="mb-2 block">
-                        <Label htmlFor="email1" value="Your email" />
+        <div className="flex justify-center h-screen items-center bg-gradient-to-t from-orange-300 to-orange-50">
+            <Card>
+                <form onSubmit={handleSubmit} className="flex max-w-md flex-col gap-4 p-10 shadow-md">
+                    <img src={aleaLogo} width={50} height={50} className="rounded-md flex self-center" />
+                    <h1>Prueba técnica Alea - React</h1>
+                    <div>
+                        <div className="mb-2 block">
+                            <Label htmlFor="email1" value="Your email" />
+                        </div>
+                        <TextInput id="email1" type="email" name="email" placeholder="name@example.com" required />
                     </div>
-                    <TextInput id="email1" type="email" name="email" placeholder="name@example.com" required />
-                </div>
-                <div>
-                    <div className="mb-2 block">
-                        <Label htmlFor="password1" value="Your password" />
+                    <div>
+                        <div className="mb-2 block">
+                            <Label htmlFor="password1" value="Your password" />
+                        </div>
+                        <TextInput id="password1" type="password" required name="password" />
                     </div>
-                    <TextInput id="password1" type="password" required name="password" />
-                </div>
-                <div className="text-xs text-right">
-                    <p>eve.holt@reqres.in</p>
-                    <p>cityslicka</p>
-                </div>
-                <Button type="submit" className="bg-slate-600">Submit</Button>
-            </form>
+                    <div className="text-xs text-right">
+                        <p>eve.holt@reqres.in</p>
+                        <p>cityslicka</p>
+                    </div>
+                    <Button type="submit" className="bg-orange-500 w-32 flex self-center">Submit</Button>
+                </form>
+            </Card>
         </div>
     )
 }

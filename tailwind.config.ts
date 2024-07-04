@@ -6,11 +6,7 @@ export default {
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'notFound': "url('../src/assets/notFound.jpg')"
-      }
-    }
+    extend: {}
   },
   plugins: [
     require('flowbite/plugin')

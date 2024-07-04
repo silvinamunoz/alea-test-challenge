@@ -17,12 +17,13 @@ const Users = () => {
     const { users, pagination, isLoading, isFetching, } = useUsers(currentPage, itemsPerPage);
 
     return (
-        <div className=" w-full bg-white bg-gradient-to-r p-5">
+        <div className=" w-full bg-white bg-gradient-to-r px-10 py-6">
             <Navbar />
             {isLoading || isFetching ? (
                 <Spinner />
             ) : (
                 <div className="overflow-x-auto">
+                    <h1 className="text-md text-slate-500 py-4 font-bold">Users</h1>
                     <TableComponent
                         data={users}
                         currentPage={currentPage}
