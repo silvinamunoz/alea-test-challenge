@@ -1,4 +1,4 @@
-# Alea Frontend Knowledge Test
+## Alea Frontend Knowledge Test
 
 To complete the knowledge test, you must complete the following goals:
 
@@ -15,10 +15,17 @@ To complete the knowledge test, you must complete the following goals:
 - Unit Testing
 - Create a custom 404 Error Page
 
-# Installation
-This module is distributed via npm which is bundled with node and should be installed as one of your project's dependencies:
+## Installation and Setup Instructions
+### You will need node and npm installed globally on your machine.
 
-
+Installation:
 ``` npm install ```
 
+To run test suite:
+```npm test ```
+
+To start server:
 ``` npm run dev ```
+
+To visit app:
+`localhost:5173`
