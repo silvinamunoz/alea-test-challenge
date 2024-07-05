@@ -1,4 +1,4 @@
-import { fetchUsers } from '../services/users'
+import { fetchUsers } from '../../services/users'
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 export interface User {
     id: string

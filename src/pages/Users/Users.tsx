@@ -1,8 +1,9 @@
-import useUsers from "../hooks/useUsers";
-import Navbar from "../components/Navbar";
-import Spinner from "../components/Spinner";
+import useUsers from "../../hooks/useUsers/useUsers";
+import Navbar from "../../components/Navbar";
+import Spinner from "../../components/Spinner";
 import { useState } from "react";
-import TableComponent from "../components/table/Table";
+import TableComponent from "../../components/table/Table";
+import React from "react";
 
 /**
  * Users Component

@@ -1,6 +1,7 @@
 import { Button } from "flowbite-react";
 import { useNavigate } from "react-router-dom";
-import notFound from "../assets/img/notFoundImg.png";
+import notFound from "../../assets/img/notFoundImg.png";
+import React from "react";
 
 const ErrorPage = () => {
     const navigate = useNavigate()

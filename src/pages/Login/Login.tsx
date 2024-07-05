@@ -1,6 +1,7 @@
+import React from "react";
 import { Label, TextInput, Button, Card } from "flowbite-react";
-import useLogin from "../hooks/useLogin";
-import aleaLogo from '../assets/img/alea_logo.jpeg';
+import useLogin from "../../hooks/useLogin/useLogin";
+import aleaLogo from '../../assets/img/alea_logo.jpeg';
 
 const Login = () => {
 
@@ -18,7 +19,7 @@ const Login = () => {
     return (
         <div className="flex justify-center h-screen items-center bg-gradient-to-t from-orange-300 to-orange-50">
             <Card>
-                <form onSubmit={handleSubmit} className="flex max-w-md flex-col gap-4 p-10 shadow-md">
+                <form onSubmit={handleSubmit} className="flex max-w-md flex-col gap-4 p-10 shadow-md" aria-label='Login Form'>
                     <img src={aleaLogo} width={50} height={50} className="rounded-md flex self-center" />
                     <h1>Prueba técnica Alea - React</h1>
                     <div>
