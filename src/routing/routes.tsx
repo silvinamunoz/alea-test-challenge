@@ -1,7 +1,7 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
-import Login from "../pages/Login";
-import Users from "../pages/Users";
-import ErrorPage from "../pages/ErrorPage";
+import Login from "../pages/Login/Login";
+import Users from "../pages/Users/Users";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import { useTokenStore } from "../store/store";
 
 const isLogged = async () => {

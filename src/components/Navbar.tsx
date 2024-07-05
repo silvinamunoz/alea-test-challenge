@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from "flowbite-react"
 import useLogout from "../hooks/useLogout";
 import aleaLogo from '../assets/img/alea_logo.jpeg';

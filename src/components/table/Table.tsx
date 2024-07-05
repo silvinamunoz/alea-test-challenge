@@ -1,6 +1,6 @@
-
+import React from 'react';
 import { Card, Table } from "flowbite-react";
-import { User } from "../../hooks/useUsers";
+import { User } from "../../hooks/useUsers/useUsers";
 import Pagination from "../pagination/Pagination";
 interface TableCompProps {
     data: User[] | undefined;
@@ -17,8 +17,8 @@ const TableComponent = (props: TableCompProps) => {
         <>
             <Card>
                 <Table className="relative">
-                    <Table.Head className="text-left">
-                        <Table.HeadCell>ID</Table.HeadCell>
+                    <Table.Head className="text-left ">
+                        <Table.HeadCell className='px-3'>ID</Table.HeadCell>
                         <Table.HeadCell>Name</Table.HeadCell>
                         <Table.HeadCell>Email</Table.HeadCell>
                     </Table.Head>
@@ -27,7 +27,7 @@ const TableComponent = (props: TableCompProps) => {
                             <p>No Results</p>
                         ) : (users?.map((user: User) => {
                             return <Table.Row key={user?.id} className="bg-white py-4 px-3">
-                                <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                                <Table.Cell className="px-2 whitespace-nowrap font-medium text-gray-900 dark:text-white">
                                     {user?.id}
                                 </Table.Cell>
                                 <Table.Cell className="flex items-center gap-2">

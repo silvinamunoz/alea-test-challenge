@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from "flowbite-react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import SelectItemsPerPage from "./SelectItemsPerPage";
@@ -20,7 +21,7 @@ const Pagination = (props: PaginationProps) => {
                 setItemsPerPage={setItemsPerPage}
             />
             <Button
-                className={`${currentPage === 1 ? 'bg-slate-300' : 'bg-slate-400'} `}
+                className={`${currentPage === 1 ? 'bg-slate-300' : 'bg-slate-400'} px-3`}
                 disabled={currentPage === 1}
                 onClick={() => setCurrentPage(currentPage - 1)}
             >
@@ -30,7 +31,7 @@ const Pagination = (props: PaginationProps) => {
                 </div>
             </Button>
             <Button
-                className={`${currentPage === totalPages ? 'bg-slate-300' : 'bg-slate-400'} `}
+                className={`${currentPage === totalPages ? 'bg-slate-300' : 'bg-slate-400'} px-3`}
                 disabled={currentPage === totalPages}
                 onClick={() => setCurrentPage(currentPage + 1)}
             >
